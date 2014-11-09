@@ -102,14 +102,14 @@ Binning details
 -----------------------------------------------------
 --axis		[z]	: axis along which to bin the coords
 --bins		[1]	: distance between bins (Angstrom)
---min	[-100]	: minimum of range (Angstrom)
---max	[100]	: maxomum of range (Angstrom)
+--min		[-100]	: minimum of range (Angstrom)
+--max		[100]	: maxomum of range (Angstrom)
 
 Lipids identification (see note 2)
 -----------------------------------------------------
 --bead		[PO4]	: lipids bead name
 --flipflops		: input file with flipflopping lipids
---leaflets	optimise	: leaflet identification ('optimise', 'large' or float)
+--leaflets	optimise: leaflet identification ('optimise', 'large' or float)
 
 Graph details
 -----------------------------------------------------
