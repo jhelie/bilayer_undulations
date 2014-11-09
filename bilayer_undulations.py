@@ -92,7 +92,7 @@ The following python modules are needed :
 Option	      Default  	Description                    
 -----------------------------------------------------
 -f			: structure file [.gro] (required)
--x			: trajectory file [.xtc] (required)
+-x			: trajectory file [.xtc] (required, must be in current folder unless -o is used)
 -o			: name of output folder
 -b			: beginning time (ns)
 -e			: ending time (ns)	
