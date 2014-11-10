@@ -506,8 +506,8 @@ def post_process_data():
 	global bins_pos_avg
 	
 	#normalise
-	z_hist["upper"] = z_hist["upper"] / float(leaflet_sele["upper"].numberOfResidues() * nb_frames_to_process) * 100
-	z_hist["lower"] = z_hist["lower"] / float(leaflet_sele["lower"].numberOfResidues() * nb_frames_to_process) * 100
+	z_hist["upper"] = z_hist["upper"] / float(leaflet_sele["upper"].numberOfResidues() * nb_frames_to_process)
+	z_hist["lower"] = z_hist["lower"] / float(leaflet_sele["lower"].numberOfResidues() * nb_frames_to_process)
 	
 	return
 def write_xvg_undulations():
@@ -555,7 +555,7 @@ def graph_xvg_undulations():
 	fontP.set_size("small")
 	ax.legend(prop=fontP)
 	plt.xlabel('z position ($\AA$)', fontsize="small")
-	plt.ylabel('frequency (avg number of atoms)', fontsize="small")
+	plt.ylabel('particles relative distribution', fontsize="small")
 
 	#save figure
 	#-----------
@@ -566,7 +566,7 @@ def graph_xvg_undulations():
 	ax.xaxis.set_ticks_position('bottom')
 	ax.yaxis.set_ticks_position('left')
 	ax.xaxis.set_major_locator(MaxNLocator(nbins=args.xticks))
-	ax.yaxis.set_major_locator(MaxNLocator(integer=True, nbins=args.yticks))
+	ax.yaxis.set_major_locator(MaxNLocator(nbins=args.yticks))
 	plt.setp(ax.xaxis.get_majorticklabels(), fontsize="small" )
 	plt.setp(ax.yaxis.get_majorticklabels(), fontsize="small" )
 	fig.savefig(filename_png, transparent = True)
