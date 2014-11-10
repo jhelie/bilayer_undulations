@@ -567,6 +567,8 @@ def graph_xvg_undulations():
 	ax.yaxis.set_ticks_position('left')
 	ax.xaxis.set_major_locator(MaxNLocator(nbins=args.xticks))
 	ax.yaxis.set_major_locator(MaxNLocator(nbins=args.yticks))
+	ax.get_xaxis().set_tick_params(direction='out')
+	ax.get_yaxis().set_tick_params(direction='out')
 	plt.setp(ax.xaxis.get_majorticklabels(), fontsize="small" )
 	plt.setp(ax.yaxis.get_majorticklabels(), fontsize="small" )
 	fig.savefig(filename_png, transparent = True)
