@@ -545,8 +545,8 @@ def graph_xvg_undulations():
 	fig=plt.figure(figsize=(8, 6.2))
 	fig.suptitle("Distribution of leaflet coordinates along the " + str(args.axis) + " axis")
 
-	#plot data: %
-	#------------
+	#plot data
+	#---------
 	ax = fig.add_subplot(111)
 	plt.plot(bins_pos_avg, z_hist["upper"], color = colours["upper"], linewidth = 1, alpha = 0.22, label = "upper")
 	plt.plot(bins_pos_avg, z_hist["lower"], color = colours["lower"], linewidth = 1, alpha = 0.22, label = "lower")
