@@ -506,8 +506,8 @@ def post_process_data():
 	global bins_pos_avg
 	
 	#normalise
-	z_hist["upper"] /= float(nb_frames_to_process)
-	z_hist["lower"] /= float(nb_frames_to_process)
+	z_hist["upper"] = z_hist["upper"] / float(leaflet_sele["upper"].numberOfResidues() * nb_frames_to_process) * 100
+	z_hist["lower"] = z_hist["lower"] / float(leaflet_sele["lower"].numberOfResidues() * nb_frames_to_process) * 100
 	
 	return
 def write_xvg_undulations():
