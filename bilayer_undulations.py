@@ -569,8 +569,8 @@ def graph_xvg_undulations():
 	ax.yaxis.set_major_locator(MaxNLocator(integer=True, nbins=args.yticks))
 	plt.setp(ax.xaxis.get_majorticklabels(), fontsize="small" )
 	plt.setp(ax.yaxis.get_majorticklabels(), fontsize="small" )
-	fig.savefig(filename_png)
-	fig.savefig(filename_svg)
+	fig.savefig(filename_png, transparent = True)
+	fig.savefig(filename_svg, transparent = True)
 	plt.close()
 	return
 
